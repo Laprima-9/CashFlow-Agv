@@ -10,14 +10,24 @@ class profilGweh extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Profil Pertama Gweh"),
-          backgroundColor: const Color.fromARGB(255, 0, 139, 160),
+          backgroundColor: const Color.fromARGB(255, 255, 7, 156),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Widget Ikon (Bisa dianggap sebagai foto profil)
-              const Icon(Icons.account_circle, size: 100, color: Color.fromARGB(255, 0, 139, 160)),
+
+              CircleAvatar(
+                radius: 84,
+                backgroundColor: const Color.fromARGB(255, 255, 7, 156),
+                child: CircleAvatar(
+                  radius: 80,
+                  backgroundColor: const Color.fromARGB(0, 255, 255, 255),
+                  backgroundImage: AssetImage('assets/PP.jpeg'),
+                ),
+              ),
+
+              const SizedBox(height: 20), // Memberi jarak kosong
 
               // Widget Teks Nama
               const Text(

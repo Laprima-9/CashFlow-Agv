@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cashflow/welcome.dart';
 import 'package:cashflow/add_activity.dart';
+import 'package:cashflow/profil.dart';
 // Jangan lupa import file tempat AddActivityScreen berada jika belum
 // import 'package:cashflow/add_activity.dart'; // (Sesuaikan nama file-nya)
 
@@ -29,6 +30,18 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dashboard Keuangan"),
         backgroundColor: Colors.indigo,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {
+              // Aksi ketika ikon profil diklik (misalnya, navigasi ke halaman profil)
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const profilGweh()),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
